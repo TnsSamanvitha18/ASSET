@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}ASSET{% endblock %}
+
+{% block content %}
+<style>
+    .show-password-container {
+        margin-top: 6px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .show-password-container input[type='checkbox'] {
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+    }
+    .show-password-container label {
+        font-size: 13px;
+        color: var(--text-secondary);
+        cursor: pointer;
+    }
+</style>
+<div class="login-container">
+
+    <div class="login-card">
+        <h2>Recruiter Login</h2>
+
+        <form method="POST" class="login-form">
+
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Enter username" required>
+
+            <label>Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter password" required>
+
+            <div class="show-password-container">
+                <input type="checkbox" id="show-pw" onchange="
+                    document.getElementById('password').type = this.checked ? 'text' : 'password'
+                ">
+                <label for="show-pw" style="font-size: 13px; color: var(--text-secondary); cursor: pointer;">
+                    Show password
+                </label>
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+
+        </form>
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+
+</div>
+
+{% endblock %}

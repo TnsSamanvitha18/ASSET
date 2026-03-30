@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}ASSET{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="header-bar">
+        <h1>Upload Your Resume</h1>
+        <p>Our AI system will analyze your skills and specialization for matching.</p>
+    </div>
+
+    <div class="form-box">
+        <form method="POST" enctype="multipart/form-data" class="upload-form">
+            <div class="form-group">
+                <label for="name">Candidate Name (Optional):</label>
+                <input type="text" name="name" id="name" placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address (Required):</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="resume">Resume (PDF Only):</label>
+                <input type="file" name="resume" id="resume" accept=".pdf" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Upload and Extract Skills</button>
+        </form>
+
+        {% if success %}
+            <p class="success">{{ success }}</p>
+        {% endif %}
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+
+    <div class="info-box">
+        <h3>How it works</h3>
+        <p>1. Upload your resume in PDF format.</p>
+        <p>2. Our AI extracts your skills and role automatically.</p>
+        <p>3. Recruiters can then match your profile with job descriptions efficiently.</p>
+    </div>
+</div>
+{% endblock %}

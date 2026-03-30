@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+
+{% block title %}ASSET - Recruiter Dashboard{% endblock %}
+
+{% block content %}
+<div class="container" style="width: 90%;">
+
+    <div class="header-bar">
+        <h1>Recruiter Dashboard</h1>
+        <div class="nav-links">
+            <a href="{{ url_for('index') }}" class="logout-btn" style="background-color: #6c757d; margin-right: 10px;">Home</a>
+            <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+        </div>
+    </div>
+
+    <div class="form-box">
+        <h3>Analyze Candidates</h3>
+        <form method="POST">
+            <textarea name="jd" placeholder="Enter Job Description" required>{{ session.get('current_jd', '') }}</textarea>
+            <button type="submit">Match Candidates</button>
+        </form>
+    </div>
+
+    <h2>Candidate Ranking</h2>
+    
+    <form id="candidateForm" method="POST">
+        <table id="candidateTable" class="display">
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>Candidate</th>
+                    <th>Email</th>
+                    <th>Score</th>
+                    <th>Skills</th>
+                    <th>Role</th>
+                    <th>Justification</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for r in results %}
+                <tr {% if r.get('status') == 'shortlisted' %}style="background-color: #f0f0f0; color: #888;"{% endif %}>
+                    <td>
+                        {% if r.get('status') != 'shortlisted' %}
+                            <input type="checkbox" name="candidate_ids" value="{{ r.get('id') }}">
+                        {% else %}
+                            <input type="checkbox" disabled checked>
+                        {% endif %}
+                    </td>
+                    <td>{{ r.get('name', 'Unknown') }}<br><small>{{ r.get('file_name', '') }}</small></td>
+                    <td>{{ r.get('email', 'N/A') }}</td>
+                    <td class="score">{{ r.get('score', 'N/A') }}</td>
+                    <td class="skills">
+                        {% set skills = r.get('skills') %}
+                        {% if skills is iterable and skills is not string %}
+                            {{ skills | join(', ') or 'Not extracted' }}
+                        {% else %}
+                            {{ skills or 'Not extracted' }}
+                        {% endif %}
+                    </td>
+                    <td class="role">{{ r.get('role', 'Unknown') }}</td>
+                    <td class="justification">{{ r.get('justification', 'Pending analysis') }}</td>
+                    <td>
+                        {% if r.get('status') == 'shortlisted' %}
+                            <span style="background: #28a745; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.8em;">Shortlisted</span>
+                        {% elif r.get('status') == 'rejected' %}
+                            <span style="background: #dc3545; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.8em;">Rejected</span>
+                        {% else %}
+                            <span style="background: #ffc107; color: black; padding: 2px 8px; border-radius: 10px; font-size: 0.8em;">Pending</span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <div style="margin-top: 20px; text-align: right; display: flex; justify-content: flex-end; gap: 10px;">
+            <button type="submit" formaction="/reject" formmethod="post" style="padding: 12px 24px; background: #dc3545; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;" onclick="return confirm('Are you sure you want to reject the selected candidates?');">Reject Selected</button>
+            <button type="submit" formaction="/shortlist" formmethod="post" style="padding: 12px 24px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Shortlist Selected</button>
+        </div>
+    </form>
+
+    <hr style="margin: 40px 0;">
+
+    <details style="background: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #ddd;">
+        <summary style="cursor: pointer; font-size: 1.5em; font-weight: bold; padding: 10px;">Rejected Candidates Table (Click to Expand)</summary>
+        <div style="margin-top: 20px;">
+            <table id="rejectedTable" class="display">
+                <thead>
+                    <tr>
+                        <th>Candidate</th>
+                        <th>Email</th>
+                        <th>Score</th>
+                        <th>Rejection Reason</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for r in rejected %}
+                    <tr>
+                        <td>{{ r.get('name', 'Unknown') }}<br><small>{{ r.get('file_name', '') }}</small></td>
+                        <td>{{ r.get('email', 'N/A') }}</td>
+                        <td>{{ r.get('score', 'N/A') }}</td>
+                        <td style="color: #dc3545;">{{ r.get('rejection_reason') or 'No justification provided.' }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </details>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    $(document).ready(function() {
+        $('#candidateTable').DataTable({
+            "order": [[3, "desc"]], // Sort by score by default
+            "pageLength": 10,
+            "columnDefs": [
+                { "orderable": false, "targets": 0 } // Disable sorting on checkbox column
+            ]
+        });
+        
+        $('#rejectedTable').DataTable({
+            "order": [[2, "desc"]]
+        });
+    });
+
+    function submitForm(actionUrl) {
+        var form = document.getElementById('candidateForm');
+        form.action = actionUrl;
+        form.submit();
+    }
+</script>
+{% endblock %}

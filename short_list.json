@@ -1,0 +1,183 @@
+[
+    {
+        "jd_id": "Junior Software Developer_cfd83b60",
+        "shortlist": [
+            {
+                "candidate_id": "aeb27102",
+                "questions": {
+                    "technical": [
+                        "You've listed experience with C++, Python, and Java. Which one would you choose for building a scalable backend for a web application, and how would you implement Object-Oriented Programming (OOP) principles to ensure the code is maintainable?",
+                        "Given your knowledge of the MERN stack and Python, how would you approach integrating a Machine Learning model built in Python into a React-based frontend?",
+                        "Explain how you would use MySQL and DBMS concepts to design a database schema for a simple task management system (like Jira), ensuring data integrity through normalization.",
+                        "In the context of Data Structures and Algorithms, how would you optimize a search operation in a large dataset using Azure Fundamentals or cloud-based storage?",
+                        "Describe a scenario where you used Git for version control in a team project. How did you handle a merge conflict in Visual Studio Code?"
+                    ],
+                    "hr": [
+                        "You have experience with Jira and Google Workspace. Can you describe how you've used these tools to manage your time and tasks during a project or internship?",
+                        "What motivated you to acquire certifications like Azure Fundamentals alongside your core programming skills?",
+                        "Tell me about a time you had to solve a complex technical problem. What was your process, and what was the outcome?",
+                        "As a fresher, how do you prioritize your learning when faced with multiple new technologies simultaneously?"
+                    ],
+                    "cultural_fit": [
+                        "Since this role offers remote options, how do you ensure effective communication and productivity when working independently?",
+                        "Your profile shows a mix of creative (Canva) and technical skills. How does this multidisciplinary background help you collaborate with designers and product managers?",
+                        "Why are you interested in joining our team as a Software Developer specifically, and how do you see yourself contributing to our projects in the first six months?",
+                        "How do you handle feedback on your code during a peer review process?"
+                    ]
+                }
+            },
+            {
+                "candidate_id": "197202ab",
+                "questions": {
+                    "technical": [
+                        "With your experience in both x86 Assembly and high-level languages like Java and C#, how has understanding low-level architecture influenced the way you write and optimize code in high-level frameworks?",
+                        "Explain the Model-View-Controller (MVC) architecture. How would you implement this pattern using ASP.NET or PHP for a web application?",
+                        "You've worked with the Win32 API and Linux environments. What are the key differences you've encountered when managing system resources or threads in these two environments?",
+                        "How would you use MySQL and SQL Membership to handle user authentication and authorization in a secure web application?",
+                        "Describe a project where you used OpenGL. What were the biggest challenges in managing the graphics pipeline or rendering performance?"
+                    ],
+                    "hr": [
+                        "You possess a very broad range of skills (Ruby, Perl, SML, etc.). How do you decide which language or tool is best suited for a specific project requirement?",
+                        "Tell me about a time you had to work on a legacy codebase (like x86 or older PHP versions). How did you ensure you didn't break existing functionality while making updates?",
+                        "Where do you see your career heading\u2014towards system-level programming, web development, or specialized areas like graphics?",
+                        "Describe a situation where you had to explain a technical concept to a non-technical team member."
+                    ],
+                    "cultural_fit": [
+                        "Our team works in an agile environment. How do you feel about shifting between different technologies and stacks based on project needs?",
+                        "What draws you to a software developer role in a modern tech environment given your extensive background in classic and system-level programming?",
+                        "How do you stay updated with modern web standards (HTML5/CSS3/ES6+) when you also maintain skills in older or more niche languages like Perl and SML?",
+                        "What is your preferred way to collaborate with a team: pair programming, independent modules, or frequent stand-up meetings?"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "jd_id": "Data Analyst (Fresher)_3378c0de",
+        "shortlist": [
+            {
+                "candidate_id": "dcb14ffd",
+                "questions": {
+                    "technical": [
+                        "Given your experience with Django and SQL (PostgreSQL/Oracle), how would you design a SQL query to identify seasonal trends in a sales dataset spanning three years?",
+                        "You have experience with scikit-learn. Can you walk us through how you would handle missing values and outliers in a dataset using Python's Pandas library before performing an analysis?",
+                        "As someone with a strong web development background (Angular/React), how would you approach building an interactive data dashboard? What specific metrics would you focus on to ensure clarity for a business user?",
+                        "How do you ensure data integrity when extracting information from REST APIs for use in a data analysis pipeline?",
+                        "In your opinion, what are the advantages of using Python for data analysis over traditional tools like Excel, and in what scenarios would you still prefer Excel?"
+                    ],
+                    "hr": [
+                        "Your profile shows a strong focus on Full-Stack development. Why are you interested in transitioning into a Data Analyst role as a fresher?",
+                        "Describe a time when you had to explain a complex technical concept or a piece of code to a non-technical team member. How did you ensure they understood?",
+                        "Can you describe a challenging project you worked on using Git? How did you handle conflicts or mistakes in the codebase?",
+                        "Since this is a Data Analyst role, attention to detail is critical. Tell me about a time you identified a small but significant error in a project before it was finalized.",
+                        "How do you prioritize your tasks when you are working on multiple data requests with tight deadlines?"
+                    ],
+                    "cultural_fit": [
+                        "What draws you to work for a company in the Indian market, and how do you feel about working in a remote or hybrid environment?",
+                        "Data analysis often involves repetitive cleaning tasks. What motivates you to stay engaged and ensure the highest quality of work during the 'unseen' parts of data processing?",
+                        "Our team values continuous learning. What is a recent data trend or library you have been teaching yourself, and how do you plan to apply it here?",
+                        "How do you handle feedback if a business stakeholder challenges the insights you've presented in a report?",
+                        "Where do you see your career path evolving\u2014more toward Data Science and Machine Learning, or toward Business Intelligence and Strategy?"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "jd_id": "AI-Driven Travel Platform Development Team_a5780e4b",
+        "shortlist": [
+            {
+                "candidate_id": "11ab916c",
+                "questions": {
+                    "technical": [
+                        "Given your expertise in R and STATA, how would you analyze seasonal travel trends across different Indian states to optimize pricing strategies for our application?",
+                        "Based on your market research skills, how would you approach identifying the primary travel personas within the Indian domestic market (e.g., luxury, budget, spiritual, adventure)?",
+                        "How can we use your financial analysis background to project the ROI of implementing specific AI features, such as an automated itinerary generator, versus traditional booking methods?",
+                        "Our application will deal with diverse datasets from various Indian tourism boards; how would you use Data Analysis tools to ensure data cleanlines and actionable business insights?",
+                        "Since you are proficient in French and Spanish, how would you design a strategy to expand this Indian travel app to attract international tourists from those regions?"
+                    ],
+                    "hr": [
+                        "Describe a time when you had to translate complex data findings into a presentation for stakeholders who were not data-savvy. How did you ensure they understood?",
+                        "How do you prioritize multiple tasks when conducting market research for several different geographic regions simultaneously?",
+                        "Tell me about a time you identified a business opportunity through data analysis that others had missed. What was the outcome?",
+                        "How do you handle a situation where your financial projections differ significantly from the Project Manager's expectations?"
+                    ],
+                    "cultural_fit": [
+                        "What draws you to a project focused on the Indian travel industry, and how does it align with your long-term career goals?",
+                        "As a person with a strong business and finance background, how do you feel about working in a highly technical, developer-heavy team environment?",
+                        "What is your philosophy on diversity within a project team, and how have you contributed to a diverse workplace in the past?"
+                    ]
+                }
+            },
+            {
+                "candidate_id": "ba5a55f2",
+                "questions": {
+                    "technical": [
+                        "The travel application will require high concurrency for bookings across all of India. How would you leverage C++ or Java to ensure the backend can handle thousands of simultaneous transactions?",
+                        "Given your experience with Win32 API and Linux, how would you design a cross-platform architecture that ensures the application remains performant on both mobile and desktop environments?",
+                        "How would you integrate a legacy MySQL database with a modern AI engine to provide real-time travel recommendations?",
+                        "Our project might require custom graphics for interactive maps of Indian states. How could your experience with OpenGL be applied to enhance the UI/UX of a travel app?",
+                        "With your background in ASP.NET and PHP, how would you advise the team on selecting the most secure framework for handling sensitive user payment information?"
+                    ],
+                    "hr": [
+                        "Describe a complex technical problem you solved where you had to use low-level programming (like x86 assembly). How did you explain the solution to your team?",
+                        "How do you manage your time when you are working with multiple programming languages (C#, Ruby, Perl) on the same project?",
+                        "Tell me about a time you had to learn a new technology or API (like Win32 or a new JS framework) under a very tight deadline.",
+                        "How do you approach a situation where a Project Manager asks for a feature that you believe will compromise system stability?"
+                    ],
+                    "cultural_fit": [
+                        "You have experience with a wide range of 'classic' and 'modern' languages. How do you balance the desire for technical perfection with the need for rapid product delivery in a startup-like environment?",
+                        "What motivates you to work on a localized travel application for the Indian market versus more traditional software systems?",
+                        "How do you mentor junior developers who might only be familiar with high-level languages like JavaScript or Python?"
+                    ]
+                }
+            },
+            {
+                "candidate_id": "dcb14ffd",
+                "questions": {
+                    "technical": [
+                        "How would you use scikit-learn to build a recommendation engine that suggests destinations in India based on a user's previous search history and preferences?",
+                        "We are using Django for the backend. How would you structure the REST APIs to ensure seamless communication between the Python logic and the React/Angular frontend?",
+                        "Given the diversity of Indian languages, how would you implement a scalable internationalization (i18n) strategy using JavaScript and your chosen frontend framework?",
+                        "How would you optimize PostgreSQL queries to handle large-scale geospatial data related to thousands of travel points of interest across India?",
+                        "Explain your process for managing state in a complex React or Angular application when dealing with real-time flight and hotel availability updates."
+                    ],
+                    "hr": [
+                        "As a full-stack developer, how do you decide which tasks to tackle first when both the frontend and backend require urgent attention?",
+                        "Describe a time you had to collaborate with a UI/UX designer to implement a feature that was technically challenging. How did you reach a compromise?",
+                        "Tell me about a project where you used Git for version control within a team. How did you handle a significant merge conflict?",
+                        "What is your approach to debugging an issue that occurs intermittently in a distributed system using Node and Python?"
+                    ],
+                    "cultural_fit": [
+                        "What do you think is the most important factor in making an AI-based travel app 'user-friendly' for the Indian demographic?",
+                        "How do you stay updated with the rapidly changing ecosystem of JavaScript frameworks and AI libraries?",
+                        "In a diverse team, how do you ensure that your technical choices (like React vs. Angular) are inclusive of the skills and growth of other team members?"
+                    ]
+                }
+            },
+            {
+                "candidate_id": "8e98731a",
+                "questions": {
+                    "technical": [
+                        "Using TensorFlow and NumPy, how would you develop a model to predict travel demand surges during Indian festivals like Diwali or Holi?",
+                        "Our application needs to process large amounts of unstructured data from travel reviews. How would you use Python and your ML stack to perform sentiment analysis for different states?",
+                        "How would you implement automated testing for your AI models using pytest to ensure that the recommendations remain accurate as the dataset grows?",
+                        "Since the project requires documentation (using Sphinx/LaTeX), how would you document the AI architecture so that non-technical stakeholders can understand the model's logic?",
+                        "How would you design the data pipeline in PostgreSQL to feed into a Matplotlib dashboard for the PM to visualize travel patterns across India?"
+                    ],
+                    "hr": [
+                        "AI projects often involve a lot of experimentation. How do you communicate progress to a Project Manager when a model isn't performing as expected?",
+                        "Tell me about a time you had to optimize a Python script that was running too slowly. What tools or techniques did you use?",
+                        "How do you ensure that the AI models you build are unbiased, especially when dealing with diverse cultural and regional data from India?",
+                        "Describe a situation where you had to work with a dataset that was incomplete or poorly formatted. How did you handle it?"
+                    ],
+                    "cultural_fit": [
+                        "How do you feel about working on an application where the AI is a core feature rather than a side research project?",
+                        "What excites you most about applying Deep Learning to the travel and hospitality industry in a country as diverse as India?",
+                        "How do you handle the transition from a research-oriented mindset (LaTeX, Matplotlib) to a product-oriented mindset (building a live application)?"
+                    ]
+                }
+            }
+        ]
+    }
+]

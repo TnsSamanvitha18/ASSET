@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Resume Matcher{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <!-- DataTables CSS for sorting and filtering -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    
+    <!-- jQuery and DataTables JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+<header class="main-header">
+    <div class="header-container">
+        <div class="header-logo">
+            <h1>ASSET</h1>
+        </div>
+        <nav class="nav-tabs">
+        <a href="{{ url_for('index') }}" 
+           class="tab-link {% if active_tab == 'candidate' %}active{% endif %}">
+           Candidate
+        </a>
+        <a href="{{ url_for('recruiter_login') }}" 
+           class="tab-link {% if active_tab == 'recruiter' %}active{% endif %}">
+           Recruiter
+        </a>
+        <a href="{{ url_for('interviewer') }}" 
+           class="tab-link {% if active_tab == 'interviewer' %}active{% endif %}">
+           Interviewer
+        </a>
+    </nav>
+    </div>
+</header>
+
+{% block content %}{% endblock %}
+
+{% block scripts %}{% endblock %}
+
+</body>
+</html>
